@@ -1,0 +1,12 @@
+Lab
+
+  Create a method that takes a celsius argument and convert it from celsius to fahrenheit. Or vice versa
+
+  Create a method that asks for a user input and converts it to fahrenheit. Or vice versa.
+
+  Write a program that asks for a name and an age. Have it output something like “Bob was born in 1985”
+
+  Write a mad lib program. Users are prompted for verbs, nouns, and adjectives and then it should output a paragraph using those words.
+
+
+Extra Credit - https://www.startupinstitute.com/part-time/learn/#/new-york/19320
