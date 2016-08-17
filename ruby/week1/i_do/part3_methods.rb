@@ -9,7 +9,7 @@
 
     def short_name(first_name, last_name)
       last_initial = last_name.chars.first
-      first_name + " " + last_initial + "."\
+      first_name + " " + last_initial + "."
     end
 
     returns are implied in ruby
@@ -28,15 +28,15 @@
 
 ########## Some Ruby methods ##########
 
-  def puts(a_string)
+  def puts a_string
     # prints the value of the parameter to the console logs
   end
 
-  this is already written for us, and is one of o-so-many included in Ruby
+  # this is already written for us, and is one of o-so-many included in Ruby
 
 
 ########## Getting User Input ##########
 
-  your_number = gets.chomp
+  your_number = gets
   for_twilio = format_mobile(your_number)
   puts "Your number formatted for Twilio is #{for_twilio}"

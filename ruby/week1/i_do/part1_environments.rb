@@ -14,7 +14,7 @@ https://docs.google.com/document/d/1TOHHuulQG9vC3SVAM03DsAnaRp_fHZ07AwrYtKw945M/
 
     $ git pull
     $ ruby ~/Development/startupInst/week1/executable/hello_world.rb
-    $ irc
+    $ irb
 
 
 ########## The Console - a place to run some Ruby ##########

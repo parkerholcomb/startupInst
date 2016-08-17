@@ -1,6 +1,10 @@
 
-########## Some Data Types ##########
+########## Some Standard Classes ##########
 
+# class - collection of code (that can be instantiated)
+# object - instance of a class
+
+  # Primitive Data Types
 
   1. "String"
 
@@ -13,10 +17,11 @@
     > "this is a string".class
     => String
 
-
   2. :symbol
 
     :wordWithNoSpacesAndLeadingColon
+    :camelCase
+    :with_underscore
 
   3. Integer - whole number
 
@@ -28,8 +33,9 @@
     > (1.245).class
     => Float
 
-
   5. Boolean
+    # FalseClass < Boolean
+    # TrueClass < Boolean
 
     true or false
 
@@ -40,9 +46,11 @@
     > result = false
     => true
 
+  # Complex Objects
+
   6. Date
 
-    A complex ruby object
+    # A complex ruby object
 
     > require 'date'
     => true
@@ -57,8 +65,10 @@
     2) value
 
   valid variable names
+    - my_name
+    - today = Date.today
     - no_spaces
-    - noQuotes
+    - "noQuotes" = "not a thing"
     - not_a_reserve_word
 
   valid values
