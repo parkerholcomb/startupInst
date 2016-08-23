@@ -1,0 +1,16 @@
+WeWork
+P@ssw0rd
+
+1. Complete this form
+http://bit.ly/rubyTuesdaysNYC
+
+then
+
+2. Open up terminal and...
+
+$ cd ~
+$ mkdir Development
+$ cd ~/Development/startupInst
+$ git pull
+$ cd week2/executable
+$ ruby control_flow.rb
