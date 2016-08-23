@@ -9,5 +9,5 @@ $ git add .
 $ git commit -m 'my first commit'
 $ git checkout master
 $ git pull origin master
-$ cd week2/executable
+$ cd ruby/week2/executable
 $ ruby control_flow.rb
