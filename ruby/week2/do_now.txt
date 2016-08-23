@@ -1,16 +1,13 @@
-WeWork
-P@ssw0rd
+Open up a terminal and....
 
-1. Complete this form
-http://bit.ly/rubyTuesdaysNYC
 
-then
-
-2. Open up terminal and...
-
-$ cd ~
-$ mkdir Development
 $ cd ~/Development/startupInst
-$ git pull
+$ git branch my_branch
+$ git checkout my_branch
+$ git status
+$ git add .
+$ git commit -m 'my first commit'
+$ git checkout master
+$ git pull origin master
 $ cd week2/executable
 $ ruby control_flow.rb
