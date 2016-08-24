@@ -1,5 +1,4 @@
-a conflicting change
-is here
+#learn about Git
 
 1.
 
