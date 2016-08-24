@@ -28,13 +28,13 @@ examples - what will this print out?
 
   number = 0
   while number < 10
-        puts number
-        number += 1
+    puts number
+    number += 1
   end
 
 #NOTE you can also get out of a loop with the reserve word break
 
-#NOTE you can quit a loop with Ctrl+C 
+#NOTE you can quit a loop with Ctrl+C
 
 ########## TODO::Together ##########
 
