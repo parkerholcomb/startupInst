@@ -21,16 +21,18 @@ def play_game
 end
 
 continue = 'y'
+max = 2
+count = 0
 
-
-while continue == 'y'
+while continue == 'y' && count < max
   play_game
-
   puts "would you like to play again? (y/n)"
   continue = gets.chomp
+  count += 1
 end
 
 if continue == 'n'
   puts "thanks for playing!"
-
+elsif count == max
+  puts "you reached the max"
 end
