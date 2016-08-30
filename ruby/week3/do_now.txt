@@ -1,4 +1,4 @@
-1. Sync with the week3 branch
+1. Sync with the master branch
 
 2. Open 'attendance.rb' in week3/executable
 2a. Fix the typo
