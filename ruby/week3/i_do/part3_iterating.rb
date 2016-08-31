@@ -7,8 +7,9 @@
   end
 
   people = ['Gabe','Tamas','Charles','Emily','Jason','Monica', 'Santa Claus']
+
   people.each do |name|
-    "#{name} was here on day one"
+    puts "#{name} was here on day one"
   end
 
   # to iterate through a hash
@@ -19,8 +20,8 @@
     'email': 'Holcomb',
   }
 
-  infoHash.each do |key, value|
-    puts "my #{key} is #{value}"
+  infoHash.each do |k, v|
+    puts "my #{k} is #{v}"
   end
 
 
@@ -38,19 +39,33 @@
   # is the same as
   people.each do { |name| puts "hey it's #{name}" }
 
+########## Map ##############
+emails = []
+attendance.each do |attendee|
+  emails << attendee[:email]
+end
+
+attendance.map{|attendee| attendee[:email]}
 
 ########## Select ##############
 
   numbers = [1,2,3,4,5,6,7,8,9,10]
 
+  # v0
+  evens = []
+  numbers.each do |number|
+    evens << number if number.even?
+  end
+
+  # v1
   numbers.select do |number|
     number.even?
   end
 
-  # also written as
+  # v2 also written as
   numbers.select{ |number| number.even? }
 
-  # ALSOOOO written as
+  # v3 ALSOOOO written as
   numbers.select(&:even?)
 
 ########## Ranges ##############

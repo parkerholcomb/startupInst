@@ -1,11 +1,15 @@
+require 'pry'
+
 attendance = []
 continue = 'y'
 
-puts "Let's take attendance. Please enter the first name's of everyone here.\n"
+puts "Let's take attendance. \nPlease enter the first name's of everyone here.\n"
 
-while continue = 'y'
+while continue == 'y'
   puts "enter the name of someone here"
+
   name = gets.chomp
+  binding.pry
   attendance << name
   puts "are there more people here? (y/n)"
   continue = gets.chomp

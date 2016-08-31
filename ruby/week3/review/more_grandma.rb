@@ -2,6 +2,7 @@
 # to go unless you shout BYE three times in a row.
 # So if you say BYE twice and then something else you have to say BYE three times again.
 
+require 'pry'
 
 default = "HUH?!, SPEAK UP SONNY!"
 
@@ -18,9 +19,9 @@ byes = 0
 while byes < 3
   puts "\nWhat would you like to say to grandma?"
   input = gets.chomp
-
   if input == "BYE"
     byes += 1
+    # puts "count of byes: #{byes}"
   else
     byes = 0
     grandmas_response(input)

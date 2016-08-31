@@ -4,6 +4,14 @@
 
   an ordered collection of objects
 
+  set = String.new("test")
+  set = "test"
+  set = FixNum.new(2)
+  set = 2
+
+  set = Array.new(1,2,"five", "three sir", 3)
+  set = [1,2,"five!", "8", nil, "jello"]
+
   set = [1,2,"five!", "8", nil, "jello"]
   cars = ["ford", "honda", "nissan", "cadillac", "toyota", "audi"]
   numbers = [1,2,3,4,5,6,7,8,9,10]
@@ -19,11 +27,26 @@
   > fibonnacci = [0,1,1,2,3,5,8,13]
   > fibonnacci.length
   > fibonnacci[0]
-  > fibonnacci[7] = 21
+  > fibonnacci[7] = 13
   > fibonnacci << 34
   > fibonnacci[fibonnacci.length] = fibonnacci[fibonnacci.length-2] + fibonnacci[fibonnacci.length-1]
+  >
+
+  # get first 20 elements of fib seq
+  fibonnacci = [0,1]
+  # while fibonnacci.length <= 20
+  #   fibonnacci << fibonnacci[fibonnacci.length-2] + fibonnacci[fibonnacci.length-1]
+  # end
+
+  20.times do
+    fibonnacci << fibonnacci[fibonnacci.length-2] + fibonnacci[fibonnacci.length-1]
+  end
+
+  puts fibonnacci
 
   ###############
+
+  $ irb
 
   cars = ["ford", "honda", "nissan", "cadillac", "toyota", "audi"]
 

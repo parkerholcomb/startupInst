@@ -1,10 +1,13 @@
 # Write a program that prints out the complete lyrics to “99 bottles of beer on the wall.”
 
 require 'pry'
+# binding.pry
+
+# exit (keeps code running)
+# exit-program (get me outta here!)
 
 def version_1
-  puts
-  "99 bottles of beer on the wall, 99 bottles of beer.
+  puts "99 bottles of beer on the wall, 99 bottles of beer.
   Take one down and pass it around, 98 bottles of beer on the wall.
   98 bottles of beer on the wall, 98 bottles of beer.
   Take one down and pass it around, 97 bottles of beer on the wall.
@@ -216,33 +219,49 @@ def version_2
 end
 
 def version_3
+  start = Time.now
   current_bottles = 99
   while current_bottles > 1
     next_bottles = current_bottles - 1
     puts "#{current_bottles} bottles of beer on the wall, #{current_bottles} bottles of beer.\
     Take one down and pass it around, #{next_bottles} bottles of beer on the wall."
-    # binding.pry
     current_bottles = next_bottles
   end
+  ending = Time.now
+  ending - start
 end
 
 def version_4
-  verses = [99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84, 83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+  start = Time.now
+  verses =
+  [99, 98, 97, 96, 95, 94, 93, 92, 91, 90, 89, 88, 87, 86, 85, 84,
+  83, 82, 81, 80, 79, 78, 77, 76, 75, 74, 73, 72, 71, 70, 69, 68,
+  67, 66, 65, 64, 63, 62, 61, 60, 59, 58, 57, 56, 55, 54, 53, 52,
+  51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36,
+  35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20,
+  19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
   verses.each do |i|
     puts "#{i} bottles of beer on the wall,
     #{i} bottles of beer.
     Take one down and pass it around,
     #{i-1} bottles of beer on the wall."
   end
+  ending = Time.now
+  ending - start
 end
 
 def version_5
-  (1...99).reverse_each{|i| puts "#{i} bottles of beer on the wall, #{i} bottles of beer. Take one down and pass it around, #{i-1} bottles of beer on the wall."}
+  (1...99).reverse_each { |i| puts "#{i} bottles of beer on the wall, #{i} bottles of beer. Take one down and pass it around, #{i-1} bottles of beer on the wall."}
 end
 
 
 # version_1
 # version_2
-# version_3
-# version_4
-version_5
+# v3 = version_3
+# v4 = version_4
+#
+# puts "v3 runtime #{v3}"
+# puts "v4 runtime #{v4}"
+
+# version_5
