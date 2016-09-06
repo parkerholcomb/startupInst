@@ -6,4 +6,4 @@
 
 3a. Remove the line that prevents the program from finishing
 
-4. Decide which leap_years version you prefer
+4. Decide which leap_years method you prefer

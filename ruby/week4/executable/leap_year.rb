@@ -25,6 +25,7 @@ def leap_years_v1(starting, ending)
       leap_years << yr
     end
   end
+  leap_years
 end
 
 require 'date'
