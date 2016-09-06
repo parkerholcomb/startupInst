@@ -1,0 +1,9 @@
+1. Sync with the "week4" branch
+
+2. Open 'leap_year.rb' in week4/executable
+
+3. Run 'leap_year.rb'
+
+3a. Remove the line that prevents the program from finishing
+
+4. Decide which leap_years version you prefer
