@@ -15,6 +15,16 @@
 # The rule for the dealer is this: Dealer MUST hit until they get to 17 or above. If they are at 17 or above they MUST stay. If dealer goes over 21 they automatically lose.
 # If both the player and dealer are under 21 the one closest to 21 wins.
 
+class Deck
+
+  def shuffle_deck
+    #
+  end
+
+end
+
+deck = Deck.new
+deck.shuffle_deck
 
 #You will need to have three classes. BlackJack, Player, and Dealer.
 # You will need a deck of cards that only supports 1 to 10. 52 cards total. Face and Suits are not necessary.
