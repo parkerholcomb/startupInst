@@ -1,15 +1,18 @@
-
+require 'pry'
 ########## Person ##########
 
 class Person
-  attr_accessor :first_name, :last_name
+  # attr_accessor :first_name, :last_name
 
-  def initialize
-    @first_name = "Parker"
-    middle_name = "Chase"
-    @last_name = "Holcomb"
-    @height = 6.167
-    @born = 1987
+  attr_writer :height
+  attr_reader :first_name, :last_name
+
+  def initialize(first, middle, last, height, born)
+    @first_name = first
+    @middle_name = middle
+    @last_name = last
+    @born = born
+    @height = height
   end
 
   def last_first
@@ -17,7 +20,7 @@ class Person
   end
 
   def full_name
-    @first_name + " " + middle_name + " " + @last_name
+    @first_name + " " + @middle_name + " " + @last_name
   end
 
   def age
@@ -30,7 +33,10 @@ class Person
 
 end
 
+dude = Person.new()
+dude.introduce_yourself
+
 # $ ruby week4/i_do/part2_instance_methods.rb
 
 
-lets write a height_to_s method
+# lets write a height_to_s method

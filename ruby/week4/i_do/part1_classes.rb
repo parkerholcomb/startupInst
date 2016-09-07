@@ -2,12 +2,13 @@
 
 ########## Class ##########
 
-  a blueprint for structuring data, and how to interact with that data
+  # a blueprint for structuring data, and how to interact with that data
 
   # there are a ton of included classes in Ruby core (e.g. String, Integer)
 
   > example = String.new("test")
   > example = "test"
+  > example.chars
   > example.class
     => "String"
 
@@ -27,6 +28,25 @@
   > tomorrow > today
   > yesterday.monday?
 
+  class Date
+
+    def initialize
+      @year = 2016
+      @month = 9
+      @day = 6
+    end
+
+    def next_year
+      Date.new(@year + 1, @month, @day)
+    end
+
+    def tomorrow
+      Date.new(@year, @month, @day + 1)
+    end
+
+
+  end
+
 
   ################
   # then we can also create our own
@@ -34,22 +54,19 @@
 
   class Car
     # write all the logic about what defines a car (its fields/variables)
-
     # and how we interact with them
   end
+
+  # truck = Car.new()
 
   ###
 
   class Person
+    # what are attributes of a person?
 
   end
 
-  ####
 
-  class MobilePhone
-
-
-  end
 
   #########
 
@@ -59,17 +76,17 @@
 
   a Car
 
-    -
-    -
-    -
+    make
+    model
+    year
+    color
+    mpg
 
   a Person
-    -
-    -
-    -
 
-  a MobilePhone
-
-    -
-    -
-    -
+    first_name
+    last_name
+    gender
+    age
+    hair_color
+    weight

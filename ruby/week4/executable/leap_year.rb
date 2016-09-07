@@ -34,7 +34,7 @@ require 'pry'
 
 def leap_years_v2(starting, ending)
   (starting..ending).select do |year|
-    binding.pry
+    # binding.pry
     Date.new(year).leap?
   end
 end
