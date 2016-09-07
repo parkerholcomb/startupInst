@@ -1,0 +1,10 @@
+For the lab this week, extend the capabilities of the Blackjack game. There are three tasks.
+
+Player should be asked to enter their name.
+Add the ability for the player to have a bank roll.
+Allow the Player to wager an amount on the game.
+
+Extra credit: Keep the game going until the Player has no more money in his bankroll or if he says exit.
+
+IF you'd like to see a really advanced version look this version built by Colin, an instructor in New-York:
+https://gist.github.com/sibrent/786d43c007bb166a4d0a
