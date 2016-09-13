@@ -1,0 +1,5 @@
+1. Complete bit.ly/SINYtoday
+
+2. sync w/ week 5
+
+3. ruby week5/executable/war.rb
