@@ -70,7 +70,6 @@ end
 
 class Deck
 
-  attr_accessor :remaining
   attr_accessor :cards
 
   @@suits = ["♥", "♦", "♣", "♠"]
@@ -127,10 +126,6 @@ class BlackJack
 
     @player.hand_summary
   end
-
-
-
-
 
   def offer_hit
     puts "Dealer: Would you like to hit? (y/n)"
