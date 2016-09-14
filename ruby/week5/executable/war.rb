@@ -55,7 +55,29 @@ require 'pry'
 # (1..10)
 
 # player with highest card wins
+class Card
 
+  def initialize(suit, number)
+    @suit = suit
+    @number = number
+  end
+
+  def to_s
+    "#{@number} of #{@suit}s"
+  end
+
+  def value
+    # ['A',2,3,4,5,6,7,8,9,10,'J','Q','K']
+    if @number.is_a?(Integer)
+      @number
+    elsif @number == 'A'
+      1
+    else
+      10
+    end
+  end
+
+end
 
 class Player
   attr_accessor :card, :name
@@ -83,7 +105,17 @@ class War
     @player1 = Player.new()
     @player2 = Player.new()
 
-    @deck = [2,3,4,5,6,7,8,9,10]
+    @deck = [
+        Card.new("heart",2),
+        Card.new("diamonds", 3),
+        Card.new("diamonds", 4),
+        Card.new("diamonds", 5),
+        Card.new("hearts", 6),
+        Card.new("diamonds", 7),
+        Card.new("spades", 8),
+        Card.new("diamonds", 9),
+        Card.new("diamonds", 10)
+      ]
   end
 
   def play
@@ -104,7 +136,7 @@ class War
   end
 
   def get_winner
-    if @player1.card > @player2.card
+    if @player1.card.value > @player2.card.value
       @player1
     else
       @player2
@@ -119,6 +151,12 @@ game.play
 # game = War.new()
 # game.play
 
+
+
+# card = Card.new("heart", 5)
+# card2 = Card.new("diamond", "J")
+# binding.pry
+# puts card
 
 
 
