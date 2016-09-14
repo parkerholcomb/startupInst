@@ -99,41 +99,55 @@ class Player
 
 end
 
+class Deck
+
+  def initialize
+    #
+    @cards = [
+      Card.new("heart",2),
+      Card.new("diamonds", 3),
+      Card.new("diamonds", 4),
+      Card.new("diamonds", 5),
+      Card.new("hearts", 6),
+      Card.new("diamonds", 7),
+      Card.new("spades", 8),
+      Card.new("diamonds", 9),
+      Card.new("diamonds", 10)
+    ]
+  end
+
+  def shuffle!
+    @cards.shuffle!
+  end
+
+  def draw_card
+    @cards.shift
+  end
+
+end
+
 class War
 
   def initialize
     @player1 = Player.new()
     @player2 = Player.new()
 
-    @deck = [
-        Card.new("heart",2),
-        Card.new("diamonds", 3),
-        Card.new("diamonds", 4),
-        Card.new("diamonds", 5),
-        Card.new("hearts", 6),
-        Card.new("diamonds", 7),
-        Card.new("spades", 8),
-        Card.new("diamonds", 9),
-        Card.new("diamonds", 10)
-      ]
+    @deck = Deck.new()
   end
 
   def play
     @deck.shuffle!
 
-    @player1.card = draw_card
+    @player1.card = @deck.draw_card
     puts "#{@player1.name} drew a #{@player1.card}"
 
-    @player2.card = draw_card
+    @player2.card = @deck.draw_card
     puts "#{@player2.name} gets a #{@player2.card}\n"
 
     puts "#{get_winner.name} is the winner"
 
   end
 
-  def draw_card
-    @deck.shift
-  end
 
   def get_winner
     if @player1.card.value > @player2.card.value

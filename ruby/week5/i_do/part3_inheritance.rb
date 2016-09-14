@@ -70,3 +70,6 @@ class Diesel < Car
   end
 
 end
+
+vw = Diesel.new()
+vw.current_range
