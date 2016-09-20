@@ -1,0 +1,25 @@
+Other Lab
+
+Write
+
+class RockPaperScissors
+
+end
+
+Bonus points
+
+class Game
+
+end
+
+have
+
+class RockPaperScissors < Game
+
+end
+
+
+Big time Bonus points
+
+- create app with other players
+hint: need re
