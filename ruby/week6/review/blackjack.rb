@@ -245,7 +245,6 @@ class Dealer
     @hand.map(&:to_s)
   end
 
-
   def hand_value
     @hand.inject(0){|sum, card| sum += card.value}
   end
@@ -254,14 +253,3 @@ end
 
 game = BlackJack.new()
 game.play
-#You will need to have three classes. BlackJack, Player, and Dealer.
-# You will need a deck of cards that only supports 1 to 10. 52 cards total. Face and Suits are not necessary.
-# To start the game, player and dealer should each get two cards.
-# The player should know their point total and only one of the dealer’s card.
-# Ask the player if they would like to get another card(hit).
-#   	a. If Yes, then deal another card to the player.
-# 1. If it’s over 21 then the player loses(bust) and the game is over.
-# 2. If it’s under 21. keep asking if player if he want’s another card.
-# b. If No, then it is the dealer’s turn.
-# 6. Dealer MUST get a card they have 17 or higher. The dealer must STAY if their total is 17 or over. Dealer loses if he goes over 21 (bust). This should be automated without user input.
-# 7. Once the dealer stays. The winner should be determined. Whoever has a higher point total wins and if they both have the same amount of points then it is a draw.
