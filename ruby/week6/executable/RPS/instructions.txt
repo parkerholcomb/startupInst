@@ -21,5 +21,4 @@ end
 
 Big time Bonus points
 
-- create app with other players
-hint: need re
+- create app with other players 
