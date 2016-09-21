@@ -1,7 +1,16 @@
+require 'pry'
 require "./player"
 require "./bot"
 
 class RockPaperScissors
+
+  def initialize
+    @player1 = Player.new()
+    @player2 = Bot.new()
+    puts "#{@player1.name}, looks like you will be playing against #{@player2.name}"
+    sleep 1
+    @round = 1
+  end
 
   def self.description
     puts "Rock Paper Scissors is a world renowned leader in tiebreaker space.\n\n"
@@ -14,23 +23,20 @@ class RockPaperScissors
     puts "\n2. First to 3, aka Best out of 5"
   end
 
-  def initialize
-    @player1 = Player.new()
-    @player2 = Bot.new()
-    puts "#{@player1.name}, looks like you will be playing against #{@player2.name}"
-    sleep 1
-    @round = 1
-  end
+
 
   def play
     until @player1.winCount == 3 || @player2.winCount == 3
       puts "\nRound #{@round}..."
       sleep 1
+
       scoreboard(leader)
       scoreboard(trailer)
+
       @player1.throw_hand
       @player2.throw_hand
       sleep 1
+
       winner = check_winner
       if winner
         winner.winCount += 1
@@ -53,7 +59,14 @@ class RockPaperScissors
   end
 
   def leader
-    @player1.winCount > @player2.winCount ? @player1 : @player2
+    (@player1.winCount > @player2.winCount) ? @player1 : @player2
+    #
+    # if @player1.winCount > @player2.winCount
+    #   @player1
+    # else
+    #   @player2
+    # end
+
   end
 
   def trailer
@@ -61,20 +74,22 @@ class RockPaperScissors
   end
 
   def check_winner
-
     if @player1.hand == 'Rock'
-      return nil           if @player2.hand == 'Rock'
-      return @player2    if @player2.hand == 'Paper'
-      return @player1    if @player2.hand == 'Scissors'
+      nil         if @player2.hand == 'Rock'
+      @player2    if @player2.hand == 'Paper'
+      @player1    if @player2.hand == 'Scissors'
     elsif @player1.hand == 'Paper'
-      return nil          if @player2.hand == 'Paper'
-      return @player2   if @player2.hand == 'Rock'
-      return @player1   if @player2.hand == 'Scissors'
+      nil        if @player2.hand == 'Paper'
+      @player2   if @player2.hand == 'Rock'
+      @player1   if @player2.hand == 'Scissors'
     elsif @player1.hand == 'Scissors'
-      return nil          if @player2.hand == 'Scissors'
-      return @player2   if @player2.hand == 'Rock'
-      return @player1   if @player2.hand == 'Paper'
+      nil        if @player2.hand == 'Scissors'
+      @player2   if @player2.hand == 'Rock'
+      @player1   if @player2.hand == 'Paper'
     end
-
   end
+
+
+
+
 end

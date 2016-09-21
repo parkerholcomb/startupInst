@@ -1,25 +1,6 @@
-Other Lab
+Complete the RPS game
 
-Write
+In the /casino directory
 
-class RockPaperScissors
-
-end
-
-Bonus points
-
-class Game
-
-end
-
-have
-
-class RockPaperScissors < Game
-
-end
-
-
-Big time Bonus points
-
-- create app with other players
-hint: need re
+Write a "arcade.rd" where the user
+can chose which game to play
