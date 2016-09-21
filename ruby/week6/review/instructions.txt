@@ -1,0 +1,6 @@
+Complete the RPS game
+
+In the /casino directory
+
+Write a "arcade.rd" where the user
+can chose which game to play

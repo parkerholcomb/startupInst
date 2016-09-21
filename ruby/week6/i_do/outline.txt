@@ -1,0 +1,14 @@
+https://docs.google.com/presentation/d/1RxLT6ypPpOpeiFyxrZTgFZbC58OMfxmHo0ZHG7bUUB8/edit#slide=id.p
+
+Namespaces
+
+Modules
+  - a way of grouping together methods and classes. Unlike Classes, modules can not be initialized
+
+Mixins
+  - allow you to include methods into a class
+
+  - people.rb
+
+
+require/include

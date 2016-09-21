@@ -151,7 +151,7 @@ class BlackJack
 
   def deal_dealer
     until @dealer.hand_value >= 17
-      puts "Dealer has to draw. #{@dealer.formatted_hand} - (#{@deal.hand_value})"
+      puts "Dealer has to draw. #{@dealer.formatted_hand} - (#{@dealer.hand_value})"
       card = @deck.deal
       sleep 1
       puts "Dealer draws a #{card.to_s}"
@@ -238,7 +238,7 @@ class Dealer
   end
 
   def hand_summary
-    puts "#{self.name} - #{self.formatted_hand}   | (#{self.hand_value})\n\n"
+    puts "#{name} - #{formatted_hand}   | (#{hand_value})\n\n"
   end
 
   def formatted_hand
