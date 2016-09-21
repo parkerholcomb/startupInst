@@ -1,6 +1,4 @@
-load "player.rb"
-load "bot.rb"
-load "rps.rb"
+require "./rps"
 
 RockPaperScissors.description
 

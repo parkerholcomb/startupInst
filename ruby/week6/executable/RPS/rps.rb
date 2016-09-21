@@ -1,29 +1,30 @@
-load "player.rb"
-load "bot.rb"
+require "./player"
+require "./bot"
 
 class RockPaperScissors
 
   def self.description
-    puts "Rock Paper Scissors is a world renow leader in tiebreaker space."
-    puts "It's simplicitcy, combinded with competetive nature, makes it the ideal end to an trivail disagreement, unpaid bar tab, or wing man duty."
+    puts "Rock Paper Scissors is a world renowned leader in tiebreaker space.\n\n"
+    puts "It's simplicitcy, combinded with competetive nature, makes it the ideal end to an trivail disagreement, unpaid bar tabs, or wing man duty."
   end
 
   def self.rules
-    puts "*****The Rules*********"
-    puts "1. Rock beats Scissors. Scissors beats paper. Paper beats rocks."
-    puts "2. First to 3, aka Best out of 5"
+    puts "\n*****The Rules*********"
+    puts "\n1. Rock beats Scissors. Scissors beats paper. Paper beats rocks."
+    puts "\n2. First to 3, aka Best out of 5"
   end
 
   def initialize
     @player1 = Player.new()
     @player2 = Bot.new()
     puts "#{@player1.name}, looks like you will be playing against #{@player2.name}"
+    sleep 1
     @round = 1
   end
 
   def play
     until @player1.winCount == 3 || @player2.winCount == 3
-      puts "Round #{@round}..."
+      puts "\nRound #{@round}..."
       sleep 1
       scoreboard(leader)
       scoreboard(trailer)
@@ -45,9 +46,9 @@ class RockPaperScissors
   end
 
   def scoreboard(player)
-      puts "\n\nRound #{@round}"
+      # puts "\n\nRound #{@round}"
       puts "----------------------------------"
-      puts "*****#{player.name}*****#{player.winCount}*****"
+      puts "*****  #{player.name} : #{player.winCount}  *****"
       puts "----------------------------------"
   end
 
