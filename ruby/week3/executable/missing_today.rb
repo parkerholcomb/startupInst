@@ -19,6 +19,14 @@ puts "Their names are #{attendance.join(", ")}\n"
 everyone = ['Gabe','Tamas','Charles','Emily','Jason','Monica', 'Santa Claus']
 missing = []
 
+missing = everyone.select{|name| everyone.include?(name)}
+
+missing =
+everyone.select do |name|
+  everyone.include?(name)
+end
+
+
 everyone.each do |name|
   if !attendance.include?(name)
     missing.push(name)

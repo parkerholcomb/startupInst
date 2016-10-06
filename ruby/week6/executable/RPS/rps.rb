@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 require "./player"
 require "./bot"
 
@@ -7,6 +7,7 @@ class RockPaperScissors
   def initialize
     @player1 = Player.new()
     @player2 = Bot.new()
+
     puts "#{@player1.name}, looks like you will be playing against #{@player2.name}"
     sleep 1
     @round = 1
